@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/e911a3aa47.js"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="C:\Users\n8ben\Documents\Friend-Finder\assets\css\style.css">
+    <link rel="stylesheet" type="text/css" href="C:\Users\n8ben\Documents\Friend-Finder\app\public\css\style.css">
     <title>Welcome to Friend Finder!</title>
 </head>
 
@@ -16,12 +17,19 @@
 
     <div class="container">
         <div class="jumbotron">
-            <h1 class="display-4"><i class="icon-group"></i>Friend Finder</h1>
+            <h1 class="display-4" id="logo"><i class="fas fa-user-friends" id="group"></i><span id="friend">Friend</span> | <span id="finder">Finder</span><i class="fas fa-user-friends" id="group"></i></h1>
             <hr class="my-4">
+            <div id="main">
             <p class="lead">Take a few moments to fill out our friend-finder survey</p>
             <p id="tagline">Then find the friend with the greatest compatibility!</p>
-            <a class="btn btn-primary btn-lg" href="survey.html" role="button" id="home-btn">Go to survey</a>
+            <a class="btn btn-primary btn-lg" href="/survey" role="button" id="home-btn">Take the Survey</a>
+            </div>
         </div>
+                <footer class="footer">
+                        <hr class="my-4">
+
+                        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/n8benzor/friend-finder">GitHub Repo</a></p>
+                </footer>
     </div>
 
 </body>

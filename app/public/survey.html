@@ -5,23 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/e911a3aa47.js"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="C:\Users\n8ben\Documents\Friend-Finder\assets\css\style.css">
-        <title>Take the Survey!</title>
+    <link rel="stylesheet" type="text/css" href="C:\Users\n8ben\Documents\Friend-Finder\app\public\css\style.css">
+    <title>Take the Survey!</title>
 </head>
 
 <body>
     <div class="container">
 
         <div class="card">
-            <div class="card-header">
-                <h2>Survey Questions</h2>
+            <a href="/home" id="home">
+            <div class="card-header" id="survey-header">
+                <h2><span id="friend">Friend</span> | <span id="finder">Finder</span><i class="fas fa-user-friends" id="group"></i></h2></a>
+                <h5>Survey Questions</h5>
+        </div>
 
-            </div>
             <div class="card-body">
-                <h5 class="card-title">About you</h5>
+                <h5 class="card-title" id="about">About you</h5>
 
                 <form>
                     <div class="form-group">
@@ -39,7 +42,9 @@
 
             <div class="card">
                 <div class="card-body">
-                    <div class="card-header"><h6>Question 1</h6></div>
+                    <div class="card-header">
+                        <h6>Question 1</h6>
+                    </div>
                     <p>Your mind is always buzzing with unexplored ideas and plans.</p>
                     <select class="chosen-select" id="qOne">
                         <option value></option>
@@ -54,7 +59,9 @@
 
             <div class="card">
                 <div class="card-body">
-                    <div class="card-header"><h6>Question 2</h6></div>
+                    <div class="card-header">
+                        <h6>Question 2</h6>
+                    </div>
                     <p>Generally speaking, you rely more on your experience than your imagination.</p>
                     <select class="chosen-select" id="qTwo">
                         <option value></option>
@@ -69,7 +76,10 @@
 
             <div class="card">
                 <div class="card-body">
-                    <div class="card-header"><h6>Question 3</h6></div>                    <p>You find it easy to stay relaxed and focused even when there is some pressure.</p>
+                    <div class="card-header">
+                        <h6>Question 3</h6>
+                    </div>
+                    <p>You find it easy to stay relaxed and focused even when there is some pressure.</p>
                     <select class="chosen-select" id="qThree">
                         <option value></option>
                         <option value="one">1 (Strongly Disagree)</option>
@@ -83,7 +93,9 @@
 
             <div class="card">
                 <div class="card-body">
-                    <div class="card-header"><h6>Question 4</h6></div>
+                    <div class="card-header">
+                        <h6>Question 4</h6>
+                    </div>
                     <p>You rarely do something just out of sheer curiosity.</p>
                     <select class="chosen-select" id="qFour">
                         <option value></option>
@@ -98,7 +110,9 @@
 
             <div class="card">
                 <div class="card-body">
-                    <div class="card-header"><h6>Question 5</h6></div>
+                    <div class="card-header">
+                        <h6>Question 5</h6>
+                    </div>
                     <p>People can rarely upset you.</p>
                     <select class="chosen-select" id="qFive">
                         <option value></option>
@@ -113,7 +127,9 @@
 
             <div class="card">
                 <div class="card-body">
-                    <div class="card-header"><h6>Question 6</h6></div>
+                    <div class="card-header">
+                        <h6>Question 6</h6>
+                    </div>
                     <p>It is often difficult for you to relate to other people’s feelings.</p>
                     <select class="chosen-select" id="qSix">
                         <option value></option>
@@ -128,9 +144,11 @@
 
             <div class="card">
                 <div class="card-body">
-                    <div class="card-header"><h6>Question 7</h6></div>
+                    <div class="card-header">
+                        <h6>Question 7</h6>
+                    </div>
                     <p>In a discussion, truth should be more important than people’s sensitivities.
-                        </p>
+                    </p>
                     <select class="chosen-select" id="qSeven">
                         <option value></option>
                         <option value="one">1 (Strongly Disagree)</option>
@@ -144,7 +162,9 @@
 
             <div class="card">
                 <div class="card-body">
-                    <div class="card-header"><h6>Question 8</h6></div>
+                    <div class="card-header">
+                        <h6>Question 8</h6>
+                    </div>
                     <p>You rarely get carried away by fantasies and ideas.</p>
                     <select class="chosen-select" id="qEight">
                         <option value></option>
@@ -160,8 +180,11 @@
 
             <div class="card">
                 <div class="card-body">
-                    <div class="card-header"><h6>Question 9</h6></div>
-                    <p>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</p>
+                    <div class="card-header">
+                        <h6>Question 9</h6>
+                    </div>
+                    <p>You think that everyone’s views should be respected regardless of whether they are supported by
+                        facts or not.</p>
                     <select class="chosen-select" id="qNine">
                         <option value></option>
                         <option value="one">1 (Strongly Disagree)</option>
@@ -175,9 +198,11 @@
 
             <div class="card">
                 <div class="card-body">
-                    <div class="card-header"><h6>Question 10</h6></div>
+                    <div class="card-header">
+                        <h6>Question 10</h6>
+                    </div>
                     <p>You feel more energetic after spending time with a group of people.</p>
-                    <select class="chosen-select" id="qOne">
+                    <select class="chosen-select" id="qTen">
                         <option value></option>
                         <option value="one">1 (Strongly Disagree)</option>
                         <option value="two">2</option>
@@ -187,30 +212,44 @@
                     </select>
                 </div>
             </div>
+        </div>
 
-            <div class="card-body">
-            <button type="button" class="btn btn-secondary btn-lg btn-block" id="btn">Submit</button>
+        <!-- Button trigger modal -->
+            <div class="card" id="submit">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="btn">
+                    <i class="fas fa-user-friends" id="group"></i>Submit Your Survey
+            </button>
+            </div>
 
-                <!-- The Modal -->
-                <div id="myModal" class="modal">
-
-                <!-- Modal content -->
-                <div class="modal-content">
-                <span class="close">&times;</span>
-                <p>Some text in the Modal..</p>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
                 </div>
-
-                </div>
-
             </div>
         </div>
-                <footer class="footer">
-                        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/n8benzor/friend-finder">GitHub Repo</a></p>
-                </footer>
+        <footer class="footer">
+            <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/n8benzor/friend-finder">GitHub
+                    Repo</a></p>
+        </footer>
+        
 
-    </div>
-
-<script type="text/javascript">
+    <!-- <script type="text/javascript">
     // Get the modal
     const modal = document.getElementById("myModal");
     
@@ -236,8 +275,74 @@
         modal.style.display = "none";
       }
     }
-    </script>
+    </script> -->
 </body>
 
 
 </html>
+
+<!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
+<script type="text/javascript">
+    // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
+    // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
+    // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
+    // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
+  
+    $("#btn").on("click", function(event) {
+      event.preventDefault();
+  
+      // Here we grab the form elements
+      let newProfile = {
+        name: $("#name").val().trim(),
+        photo: $("#photo").val().trim(),
+        question1: $("#qOne").val().trim(),
+        question2: $("#qTwo").val().trim(),
+        question3: $("#qThree").val().trim(),
+        question4: $("#qFour").val().trim(),
+        question5: $("#qFive").val().trim(),
+        question6: $("#qSix").val().trim(),
+        question7: $("#qSeven").val().trim(),
+        question8: $("#qEight").val().trim(),
+        question9: $("#qNine").val().trim(),
+        question10: $("#qTen").val().trim()
+      };
+  
+      console.log(newProfile);
+  
+      // This line is the magic. It"s very similar to the standard ajax function we used.
+      // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
+      // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
+      // depending on if a tables is available or not.
+  
+      $.post("/api/friends", newProfile,
+        function(data) {
+  
+          // If a table is available... tell user they are booked.
+          if (data) {
+            alert("Yay! You are officially booked!");
+          }
+  
+          // If a table is available... tell user they on the waiting list.
+          else {
+            alert("Sorry you are on the wait list");
+          }
+  
+          // Clear the form when submitting
+          $("#name").val("");
+          $("#photo").val("");
+          $("#qOne").val("");
+          $("#qTwo").val("");
+          $("#qThree").val("");
+          $("#qFour").val("");
+          $("#qFive").val("");
+          $("#qSix").val("");
+          $("#qSeven").val("");
+          $("#qEight").val("");
+          $("#qNine").val("");
+          $("#qTen").val("");
+  
+        });
+  
+    });
+  
+  </script>

@@ -2,7 +2,6 @@
 // =============================================================
 const express = require("express");
 const path = require("path");
-
 // Sets up the Express App
 // =============================================================
 const app = express();
@@ -12,11 +11,12 @@ const PORT = process.env.PORT || 8080;
 // =============================================================
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'css')));
 
 // Directs the server to the route files
 // =============================================================
-require("./app/routing/apiRoutes")(app);
-require("./app/routing/htmlRoutes")(app);
+require("../Friend-Finder/app/routing/apiRoutes")(app);
+require("../Friend-Finder/app/routing/htmlRoutes")(app);
 
 
 // Listener start the server on the port (8080)
