@@ -37,6 +37,47 @@
     cursor: pointer;
   }
 
-  .card {
-      background-color: cornflowerblue;
+.card {
+      background-color: rgb(41, 54, 63);
   }
+
+body {
+      background-color: rgb(255, 255, 255);
+      color: white
+  }
+
+.jumbotron {
+    box-shadow: 5px 10px 10px rgb(22, 22, 22);
+    background: rgb(41, 54, 63);
+    text-align: center;
+}
+
+.card-header {
+    color: rgb(13, 188, 219);
+}
+
+.card-body {
+    background: rgb(41, 54, 63);
+}
+
+#home-btn {
+    background: rgb(13, 188, 219);
+    border: none;
+}
+
+#btn {
+    background: rgb(13, 188, 219);
+    border: none;
+}
+
+a {
+    color: rgb(5, 72, 83);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(13, 188, 219);
+    text-decoration: none;
+}
+
+
