@@ -5,344 +5,404 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://kit.fontawesome.com/e911a3aa47.js"></script>
-    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- CSS and JS scripts -->
+    <!-- <script src="https://code.jquery.com/jquery.js"></script> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="C:\Users\n8ben\Documents\Friend-Finder\app\public\css\style.css">
+        
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <script src="https://kit.fontawesome.com/e911a3aa47.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/css">
     <title>Take the Survey!</title>
 </head>
 
 <body>
     <div class="container">
 
+<!-- Header -->
         <div class="card">
             <a href="/home" id="home">
-            <div class="card-header" id="survey-header">
-                <h2><span id="friend">Friend</span> | <span id="finder">Finder</span><i class="fas fa-user-friends" id="group"></i></h2></a>
-                <h5>Survey Questions</h5>
+                <div class="card-header" id="survey-header">
+                    <h2><span id="friend">Friend</span> | <span id="finder">Finder</span><i class="fas fa-user-friends"
+                            id="group"></i></h2>
+            </a>
+            <h5>Survey Questions</h5>
         </div>
 
+<!-- Name and Photo -->
+        <div class="card-body">
+            <h5 class="card-title" id="about">About you</h5>
+
+            <form>
+                <div class="form-group">
+                    <label>Name (Required)</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label>Link to Photo Image (Required)</label>
+                    <input type="text" class="form-control" id="photo" required>
+                </div>
+        </div>
+
+
+<!-- Questionaire -->
+        <div class="card">
             <div class="card-body">
-                <h5 class="card-title" id="about">About you</h5>
-
-                <form>
-                    <div class="form-group">
-                        <label>Name (Required)</label>
-                        <input type="text" class="form-control" id="name">
-                    </div>
-                    <div class="form-group">
-                        <label>Link to Photo Image (Required)</label>
-                        <input type="text" class="form-control" id="photo">
-                    </div>
-                </form>
-            </div>
-
-
-
-            <div class="card">
-                <div class="card-body">
-                    <div class="card-header">
-                        <h6>Question 1</h6>
-                    </div>
-                    <p>Your mind is always buzzing with unexplored ideas and plans.</p>
-                    <select class="chosen-select" id="qOne">
-                        <option value></option>
-                        <option value="one">1 (Strongly Disagree)</option>
-                        <option value="two">2</option>
-                        <option value="three">3</option>
-                        <option value="four">4</option>
-                        <option value="five">5 (Strongly Agree)</option>
-                    </select>
+                <div class="card-header">
+                    <h6>Question 1</h6>
                 </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body">
-                    <div class="card-header">
-                        <h6>Question 2</h6>
-                    </div>
-                    <p>Generally speaking, you rely more on your experience than your imagination.</p>
-                    <select class="chosen-select" id="qTwo">
-                        <option value></option>
-                        <option value="one">1 (Strongly Disagree)</option>
-                        <option value="two">2</option>
-                        <option value="three">3</option>
-                        <option value="four">4</option>
-                        <option value="five">5 (Strongly Agree)</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body">
-                    <div class="card-header">
-                        <h6>Question 3</h6>
-                    </div>
-                    <p>You find it easy to stay relaxed and focused even when there is some pressure.</p>
-                    <select class="chosen-select" id="qThree">
-                        <option value></option>
-                        <option value="one">1 (Strongly Disagree)</option>
-                        <option value="two">2</option>
-                        <option value="three">3</option>
-                        <option value="four">4</option>
-                        <option value="five">5 (Strongly Agree)</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body">
-                    <div class="card-header">
-                        <h6>Question 4</h6>
-                    </div>
-                    <p>You rarely do something just out of sheer curiosity.</p>
-                    <select class="chosen-select" id="qFour">
-                        <option value></option>
-                        <option value="one">1 (Strongly Disagree)</option>
-                        <option value="two">2</option>
-                        <option value="three">3</option>
-                        <option value="four">4</option>
-                        <option value="five">5 (Strongly Agree)</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body">
-                    <div class="card-header">
-                        <h6>Question 5</h6>
-                    </div>
-                    <p>People can rarely upset you.</p>
-                    <select class="chosen-select" id="qFive">
-                        <option value></option>
-                        <option value="one">1 (Strongly Disagree)</option>
-                        <option value="two">2</option>
-                        <option value="three">3</option>
-                        <option value="four">4</option>
-                        <option value="five">5 (Strongly Agree)</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body">
-                    <div class="card-header">
-                        <h6>Question 6</h6>
-                    </div>
-                    <p>It is often difficult for you to relate to other people’s feelings.</p>
-                    <select class="chosen-select" id="qSix">
-                        <option value></option>
-                        <option value="one">1 (Strongly Disagree)</option>
-                        <option value="two">2</option>
-                        <option value="three">3</option>
-                        <option value="four">4</option>
-                        <option value="five">5 (Strongly Agree)</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body">
-                    <div class="card-header">
-                        <h6>Question 7</h6>
-                    </div>
-                    <p>In a discussion, truth should be more important than people’s sensitivities.
-                    </p>
-                    <select class="chosen-select" id="qSeven">
-                        <option value></option>
-                        <option value="one">1 (Strongly Disagree)</option>
-                        <option value="two">2</option>
-                        <option value="three">3</option>
-                        <option value="four">4</option>
-                        <option value="five">5 (Strongly Agree)</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body">
-                    <div class="card-header">
-                        <h6>Question 8</h6>
-                    </div>
-                    <p>You rarely get carried away by fantasies and ideas.</p>
-                    <select class="chosen-select" id="qEight">
-                        <option value></option>
-                        <option value="one">1 (Strongly Disagree)</option>
-                        <option value="two">2</option>
-                        <option value="three">3</option>
-                        <option value="four">4</option>
-                        <option value="five">5 (Strongly Agree)</option>
-                    </select>
-                </div>
-            </div>
-
-
-            <div class="card">
-                <div class="card-body">
-                    <div class="card-header">
-                        <h6>Question 9</h6>
-                    </div>
-                    <p>You think that everyone’s views should be respected regardless of whether they are supported by
-                        facts or not.</p>
-                    <select class="chosen-select" id="qNine">
-                        <option value></option>
-                        <option value="one">1 (Strongly Disagree)</option>
-                        <option value="two">2</option>
-                        <option value="three">3</option>
-                        <option value="four">4</option>
-                        <option value="five">5 (Strongly Agree)</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body">
-                    <div class="card-header">
-                        <h6>Question 10</h6>
-                    </div>
-                    <p>You feel more energetic after spending time with a group of people.</p>
-                    <select class="chosen-select" id="qTen">
-                        <option value></option>
-                        <option value="one">1 (Strongly Disagree)</option>
-                        <option value="two">2</option>
-                        <option value="three">3</option>
-                        <option value="four">4</option>
-                        <option value="five">5 (Strongly Agree)</option>
-                    </select>
-                </div>
+                <p>Your mind is always buzzing with unexplored ideas and plans.</p>
+                <select class="chosen-select" id="qOne" required>
+                    <option value></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
             </div>
         </div>
 
-        <!-- Button trigger modal -->
-            <div class="card" id="submit">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="btn">
-                    <i class="fas fa-user-friends" id="group"></i>Submit Your Survey
-            </button>
-            </div>
-
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
+        <div class="card">
+            <div class="card-body">
+                <div class="card-header">
+                    <h6>Question 2</h6>
                 </div>
+                <p>Generally speaking, you rely more on your experience than your imagination.</p>
+                <select class="chosen-select" id="qTwo" required>
+                    <option value></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
             </div>
         </div>
-        <footer class="footer">
-            <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/n8benzor/friend-finder">GitHub
-                    Repo</a></p>
-        </footer>
+
+        <div class="card">
+            <div class="card-body">
+                <div class="card-header">
+                    <h6>Question 3</h6>
+                </div>
+                <p>You find it easy to stay relaxed and focused even when there is some pressure.</p>
+                <select class="chosen-select" id="qThree" required>
+                    <option value></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <div class="card-header">
+                    <h6>Question 4</h6>
+                </div>
+                <p>You rarely do something just out of sheer curiosity.</p>
+                <select class="chosen-select" id="qFour" required>
+                    <option value></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <div class="card-header">
+                    <h6>Question 5</h6>
+                </div>
+                <p>People can rarely upset you.</p>
+                <select class="chosen-select" id="qFive" required>
+                    <option value></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <div class="card-header">
+                    <h6>Question 6</h6>
+                </div>
+                <p>It is often difficult for you to relate to other people’s feelings.</p>
+                <select class="chosen-select" id="qSix" required>
+                    <option value></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <div class="card-header">
+                    <h6>Question 7</h6>
+                </div>
+                <p>In a discussion, truth should be more important than people’s sensitivities.
+                </p>
+                <select class="chosen-select" id="qSeven" required>
+                    <option value></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <div class="card-header">
+                    <h6>Question 8</h6>
+                </div>
+                <p>You rarely get carried away by fantasies and ideas.</p>
+                <select class="chosen-select" id="qEight" required>
+                    <option value></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-body">
+                <div class="card-header">
+                    <h6>Question 9</h6>
+                </div>
+                <p>You think that everyone’s views should be respected regardless of whether they are supported by
+                    facts or not.</p>
+                <select class="chosen-select" id="qNine" required>
+                    <option value></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <div class="card-header">
+                    <h6>Question 10</h6>
+                </div>
+                <p>You feel more energetic after spending time with a group of people.</p>
+                <select class="chosen-select" id="qTen" required>
+                    <option value></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Button trigger modal -->
+    <div class="button">
+    <button type="button" class="btn btn-primary btn-lg btn-block" id="btn" data-toggle="modal" data-target="#exampleModalCenter">
+            <i class="fas fa-user-friends" id="group"></i><strong>Submit Your Survey</strong>
+      </button>
+      </div>
+    </form>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">We've found a match for you!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="title-close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <h2 id="name-match"></h2>
+                <img id="photo-match" src="https://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/skeletor-he-man-and-the-masters-of-the-universe-1.5.jpg" alt="" width="300px" height="300px">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal" id="close">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- Footer -->
+    <footer class="footer">
+        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/n8benzor/friend-finder">GitHub
+                Repo</a></p>
+    </footer>
+
+    
+<!-- Javascript for the on click -->
+    <script type="text/javascript">
+
+// Capture the form inputs 
+$("#btn").on("click", function(){
+
+// Form validation
+function validateForm() {
+    var isValid = true;
+    $('.form-control').each(function() {
+    if ( $(this).val() === '' )
+        isValid = false;
+    });
+
+    $('.chosen-select').each(function() {
+
+      if( $(this).val() === "")
+          isValid = false;
+    });
+
+    return isValid;
+}
+
+// If all required fields are filled
+if (validateForm() == true)
+{
+    // Create an object for the user's data
+    let userData = {
+    name: $("#name").val(),
+    photo: $("#photo").val(),
+    scores: [
+        $("#qOne").val(), 
+        $("#qTwo").val(), 
+        $("#qThree").val(), 
+        $("#qFour").val(), 
+        $("#qFive").val(), 
+        $("#qSix").val(), 
+        $("#qSeven").val(), 
+        $("#qEight").val(), 
+        $("#qNine").val(), 
+        $("#qTen").val(), 
+    ]
+    };
+
+    // AJAX post the data to the friends API. 
+    $.post("/api/friends", userData, function(data){
+
+        // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+        $("#name-match").text(data.name);
+        $('#photo-match').attr("src", data.photo);
+
+        // Show the modal with the best match 
+        $("#exampleModalCenter").modal('toggle');
+
+    });
+}
+else
+{
+    alert("Please fill out all fields before submitting!");
+}
+
+return false;
+});
+
+
+        // $("#btn").on("click", function (event) {
+        //     event.preventDefault();
+            
+        //             // $("#modal").modal("toggle");
+            
+
+        //     const valid = true;
+        //     function validateForm(){
+        //     if ($("#name").val() === "" || $("#photo").val() === "") {
+        //         valid = false;
+        //         alert("Please fill in all fields")
+        //     } 
+            
+        //     if($("#chosen-select").each.val() === "") {
+        //         valid = false;
+        //     }
+        //     return valid;
+        // }
+        //     if (valid === true) {
+        //         const newProfile = {
+        //             name: $("#name").val().trim(),
+        //             photo: $("#photo").val().trim(),
+        //             scores: [
+        //                 $("#qOne").val().trim(),
+        //                 $("#qTwo").val().trim(),
+        //                 $("#qThree").val().trim(),
+        //                 $("#qFour").val().trim(),
+        //                 $("#qFive").val().trim(),
+        //                 $("#qSix").val().trim(),
+        //                 $("#qSeven").val().trim(),
+        //                 $("#qEight").val().trim(),
+        //                 $("#qNine").val().trim(),
+        //                 $("#qTen").val().trim()
+        //             ]
+        //         }
+        //         console.log(newProfile);
+
+        //         var currentURL = window.location.origin;
+
+        //         $.post(currentURL + "/api/friends", newProfile, function (data) {
+
+        //             // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+        //             $("#name-data").text(data.name);
+        //             $("#photo-data").attr("src", data.photo);
+
+        //             // Show the modal with the best match
+        //             $('#modal').on('shown.bs.modal', function (){
+        //             $("#modal").modal("toggle");
+        //         });
+        //         });
+
+        //     } else {
+        //         alert("Please fill out all fields before submitting!");
+        //     }
+        //     return false;
+        //     // Clear the form when submitting
+        //     // $("#name").val("");
+        //     // $("#photo").val("");
+        //     // $("#qOne").val("");
+        //     // $("#qTwo").val("");
+        //     // $("#qThree").val("");
+        //     // $("#qFour").val("");
+        //     // $("#qFive").val("");
+        //     // $("#qSix").val("");
+        //     // $("#qSeven").val("");
+        //     // $("#qEight").val("");
+        //     // $("#qNine").val("");
+        //     // $("#qTen").val("");
         
+        // });
 
-    <!-- <script type="text/javascript">
-    // Get the modal
-    const modal = document.getElementById("myModal");
+    </script>
+
     
-    // Get the button that opens the modal
-    const btn = document.getElementById("btn");
-    
-    // Get the <span> element that closes the modal
-    const span = document.getElementsByClassName("close")[0];
-    
-    // When the user clicks the button, open the modal 
-    btn.onclick = function() {
-      modal.style.display = "block";
-    }
-    
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
-    
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-    </script> -->
 </body>
 
 
 </html>
 
-<!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
-<script type="text/javascript">
-    // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
-    // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
-    // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
-    // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
-  
-    $("#btn").on("click", function(event) {
-      event.preventDefault();
-  
-      // Here we grab the form elements
-      let newProfile = {
-        name: $("#name").val().trim(),
-        photo: $("#photo").val().trim(),
-        question1: $("#qOne").val().trim(),
-        question2: $("#qTwo").val().trim(),
-        question3: $("#qThree").val().trim(),
-        question4: $("#qFour").val().trim(),
-        question5: $("#qFive").val().trim(),
-        question6: $("#qSix").val().trim(),
-        question7: $("#qSeven").val().trim(),
-        question8: $("#qEight").val().trim(),
-        question9: $("#qNine").val().trim(),
-        question10: $("#qTen").val().trim()
-      };
-  
-      console.log(newProfile);
-  
-      // This line is the magic. It"s very similar to the standard ajax function we used.
-      // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
-      // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
-      // depending on if a tables is available or not.
-  
-      $.post("/api/friends", newProfile,
-        function(data) {
-  
-          // If a table is available... tell user they are booked.
-          if (data) {
-            alert("Yay! You are officially booked!");
-          }
-  
-          // If a table is available... tell user they on the waiting list.
-          else {
-            alert("Sorry you are on the wait list");
-          }
-  
-          // Clear the form when submitting
-          $("#name").val("");
-          $("#photo").val("");
-          $("#qOne").val("");
-          $("#qTwo").val("");
-          $("#qThree").val("");
-          $("#qFour").val("");
-          $("#qFive").val("");
-          $("#qSix").val("");
-          $("#qSeven").val("");
-          $("#qEight").val("");
-          $("#qNine").val("");
-          $("#qTen").val("");
-  
-        });
-  
-    });
-  
-  </script>
+
+
+

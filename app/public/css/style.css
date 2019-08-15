@@ -1,41 +1,4 @@
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content */
-  .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
+
 
 .card {
       background-color: rgb(41, 54, 63);
@@ -71,6 +34,11 @@ body {
     border: none;
 }
 
+.btn:focus {
+    border-color: rgb(13, 188, 219);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgb(13, 188, 219);
+}
+
 #home {
     text-decoration: none;
     color: white;
@@ -92,8 +60,21 @@ a:active {
 
 footer {
     text-align: center;
+    margin-top: 1em;
 }
 
+/* soft tone logo */
+/* #friend {
+    color: rgb(129, 163, 64);
+    font-weight: normal;
+}
+
+#finder {
+    color: rgb(53, 96, 104);
+    font-weight: normal;
+} */
+
+/* Pink tone logo */
 #friend {
     color: deeppink;
     font-weight: normal;
@@ -103,6 +84,16 @@ footer {
     color: rgb(13, 188, 219);
     font-weight: normal;
 }
+
+/* #friend {
+    color: rgb(127, 185, 19);
+    font-weight: normal;
+}
+
+#finder {
+    color: rgb(206, 88, 34);
+    font-weight: normal;
+} */
 
 #survey-header {
     color: white;
@@ -128,3 +119,37 @@ footer {
 #main {
     margin-top: 3em;
 }
+
+.button {
+    margin-top: 1em;
+    text-align: center;
+    width: 100%;
+}
+
+.modal-content {
+    background-color: rgb(41, 54, 63);
+    border: none;
+}
+
+.modal-header {
+    background: rgb(32, 42, 49);
+    border: none;
+}
+
+.modal-footer {
+    border: none;
+}
+
+#close {
+    background: rgb(13, 188, 219);
+    border: none;
+}
+
+#title-close {
+    color: white;
+}
+
+.form-control:focus {
+    border-color: rgb(13, 188, 219);
+    /* box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgb(13, 188, 219); */
+  }
