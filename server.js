@@ -6,7 +6,7 @@ const nodemon = require("nodemon");
 // Sets up the Express App
 // =============================================================
 const app = express();
-const port = process.env.port || 8080;
+const PORT = process.env.PORT || 8080;
 
 // Sets up the Express app to handle data parsing
 // =============================================================
@@ -23,7 +23,7 @@ require("../Friend-Finder/app/routing/htmlRoutes")(app);
 
 // Listener start the server on the port (8080)
 // =============================================================
-app.listen(port, function() {
-    console.log("App listening on PORT: " + port);
+app.listen(PORT, function() {
+    console.log("App listening on PORT: " + PORT);
   });
 
