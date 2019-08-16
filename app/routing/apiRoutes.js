@@ -1,54 +1,55 @@
 
-const path = require("path");
+
 const friendsData = require("../data/friends");
 
 module.exports = function (app) {
-  // ===============================================================================
-  // ROUTING
-  // ===============================================================================
+
   app.get("/api/friends", function (req, res) {
     res.json(friendsData);
   });
 
 
-  app.post("/api/friends", function (req, res) {
-    // const newprofile = req.body.scores;
-    // begin by setting up the array hoding the user's answers
-    let userResults = req.body.scores;
-    const scoresArr = [];
-    let match = 0;
+ // API GET Requests
+ app.get("/api/friends", function (req, res) {
+  res.json(friendData);
+});
 
-    for (let i = 0; i < friendData.length; i++) {
+// API POST Requests
+app.post("/api/friends", (req, res) => {
+  let userScore = req.body.scores;
+  const scoresArr = [];
+  let bestMatch = 0;
+
+
+  for (var i = 0; i < friendData.length; i++) {
       var scoreDiff = 0;
-      for (let j = 0; j < userResults.length; j++) {
-          scoreDiff += (Math.abs(parseInt(friendData[i].scores[j]) - parseInt(userResults[j])))
+      for (var j = 0; j < userScore.length; j++) {
+          scoreDiff += (Math.abs(parseInt(friendData[i].scores[j]) - parseInt(userScore[j])))
       }
       scoresArr.push(scoreDiff);
   }
 
   // loop through ours scoresArr
-  for (let i = 0; i < scoresArr.length; i++) {
-      if (scoresArr[i] <= scoresArr[match]) {
-          match = i;
+  for (var i = 0; i < scoresArr.length; i++) {
+      if (scoresArr[i] <= scoresArr[bestMatch]) {
+          bestMatch = i;
       }
   }
 
   // return the best match
-  let soulMate = friendData[match];
+  let soulMate = friendData[bestMatch];
   res.json(soulMate);
   friendData.push(req.body)
-  console.log(req.body);
 
 });
 
 
-// app.post("/api/clear", (req, res) => {
-//   // Empty out the arrays of data
-//   friendData.length = [];
-//   res.json({
-//       ok: true
-//   });
-// });
-
-}
+app.post("/api/clear", (req, res) => {
+  // Empty out the arrays of data
+  friendData.length = [];
+  res.json({
+      ok: true
+  });
+});
+};
 
