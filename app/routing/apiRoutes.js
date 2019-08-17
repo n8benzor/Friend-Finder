@@ -21,16 +21,16 @@ app.post("/api/friends", (req, res) => {
   let bestMatch = 0;
 
 
-  for (var i = 0; i < friendsData.length; i++) {
-      var scoreDiff = 0;
-      for (var j = 0; j < userScore.length; j++) {
+  for (let i = 0; i < friendsData.length; i++) {
+      let scoreDiff = 0;
+      for (let j = 0; j < userScore.length; j++) {
           scoreDiff += (Math.abs(parseInt(friendsData[i].scores[j]) - parseInt(userScore[j])))
       }
       scoresArr.push(scoreDiff);
   }
 
   // loop through ours scoresArr
-  for (var i = 0; i < scoresArr.length; i++) {
+  for (let i = 0; i < scoresArr.length; i++) {
       if (scoresArr[i] <= scoresArr[bestMatch]) {
           bestMatch = i;
       }
