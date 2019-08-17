@@ -21,7 +21,7 @@
   
 
 
-- **Herkou Live Link:** [Friend | Finder](https://polar-depths-10639.herokuapp.com/home)
+- **Heroku Live Link:** [Friend | Finder](https://polar-depths-10639.herokuapp.com/home)
 
    
 
@@ -32,7 +32,7 @@
 ###  What does this app do?
 
   
-Friend Finder is a application that lets a user find a friendly match based on the results from an online survey. All that is required by the user is their name and a photo of themself, which when the survey is completed the user will also be added to the friends api.
+Friend Finder is a application that lets a user find a friend based on the results from an online survey. All that is required by the user is their name and a photo of themself. When the survey is completed a match will be found and the user will also be added to the friends api.
 
 ***
 
@@ -45,6 +45,7 @@ This application relies on several technologies. The Express.js framework is use
 ![enter image description here](https://github.com/n8benzor/Friend-Finder/blob/master/images/serverjs.png?raw=true)
 
 Express is also used to build our routes within the application. The routes serve two main purposes; getting data and posting data. 
+
 ![enter image description here](https://github.com/n8benzor/Friend-Finder/blob/master/images/routes.png?raw=true)
 
 The friends.js file stores the api data that the application uses to find the perfect match for the user. Upon submission of the users survey, their information will be added to the api.
@@ -64,11 +65,13 @@ Continue on the the survey questions.
 ![enter image description here](https://github.com/n8benzor/Friend-Finder/blob/master/images/questions.png?raw=true)
 
  All questions must be answered!
+
  ![enter image description here](https://github.com/n8benzor/Friend-Finder/blob/master/images/alert.png?raw=true)
 
 Click on the *'Submit Your Survey* button to get your results for your best match.
 ![enter image description here](https://github.com/n8benzor/Friend-Finder/blob/master/images/submit.png?raw=true)
 
 Possible result:
+
 ![enter image description here](https://github.com/n8benzor/Friend-Finder/blob/master/images/match.png?raw=true)
 ***
