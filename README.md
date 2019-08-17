@@ -21,7 +21,7 @@
   
 
 
-- **Heroku Live Link:** [Friend | Finder](https://polar-depths-10639.herokuapp.com/home)
+- **Heroku Live Link:** [Friend | Finder](https://polar-depths-10639.herokuapp.com)
 
    
 
