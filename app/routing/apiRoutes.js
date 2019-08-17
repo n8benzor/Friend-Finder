@@ -15,7 +15,7 @@ module.exports = function (app) {
 });
 
 // API POST Requests
-app.post("/api/friends", (req, res) => {
+app.post("/api/friends", function (req, res) {
   let userScore = req.body.scores;
   const scoresArr = [];
   let bestMatch = 0;
