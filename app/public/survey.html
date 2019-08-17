@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-        <script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8='
-        crossorigin='anonymous'></script>
+    <script src='https://code.jquery.com/jquery-3.3.1.min.js'
+        integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' crossorigin='anonymous'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
@@ -236,13 +236,13 @@
             <i class="fas fa-user-friends" id="group"></i><strong>Submit Your Survey</strong>
         </button>
     </div>
-</form>
+    </form>
 
-<!-- Footer -->
-<footer class="footer">
-    <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/n8benzor/friend-finder">GitHub
-            Repo</a></p>
-</footer>
+    <!-- Footer -->
+    <footer class="footer">
+        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/n8benzor/friend-finder">GitHub
+                Repo</a></p>
+    </footer>
 
 
     <!-- Modal -->
@@ -250,7 +250,7 @@
         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 
         <div class="modal-dialog modal-dialog-centered" role="document">
-        
+
             <div class="modal-content">
 
                 <div class="modal-header">
@@ -276,42 +276,59 @@
     <!-- Javascript for the on click -->
     <script type="text/javascript">
 
-       
-$("#submit").on("click", function (event) {
-    event.preventDefault();
+        $("#submit").on("click", function (event) {
+            event.preventDefault();
 
-    // Object for the users form data
-    let userData = {
-        name: $("#name").val(),
-        photo: $("#photo").val(),
-        scores: [
-            $("#q1").val(),
-            $("#q2").val(),
-            $("#q3").val(),
-            $("#q4").val(),
-            $("#q5").val(),
-            $("#q6").val(),
-            $("#q7").val(),
-            $("#q8").val(),
-            $("#q9").val(),
-            $("#q10").val()
-        ]
-    };
+            // Form validation
+      function validateForm() {
+        let valid = true;
+        $(".form-control").each(function() {
+          if ($(this).val() === "") {
+            valid = false;
+          }
+        });
 
-    // AJAX post the data to the friends API.
-    $.post("/api/friends", userData, function (data) {
+        $(".chosen-select").each(function() {
 
-        // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-        $("#match-name").text(data.name);
-        $("#match-photo").attr("src", data.photo);
+          if ($(this).val() === "") {
+            valid = false;
+          }
+        });
+        return valid;
+      }
 
-        // Show the modal with the best match
-        $("#results-modal").modal("toggle");
+      // If all required fields are filled
+      if (validateForm()=== true) {
 
-    });
-
-});
-
+            // Object for the users form data
+            let userData = {
+                name: $("#name").val(),
+                photo: $("#photo").val(),
+                scores: [
+                    $("#q1").val(),
+                    $("#q2").val(),
+                    $("#q3").val(),
+                    $("#q4").val(),
+                    $("#q5").val(),
+                    $("#q6").val(),
+                    $("#q7").val(),
+                    $("#q8").val(),
+                    $("#q9").val(),
+                    $("#q10").val()
+                ]
+            };
+            // AJAX post the data to the friends API.
+            $.post("/api/friends", userData, function (data) {
+                // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+                $("#match-name").text(data.name);
+                $("#match-photo").attr("src", data.photo);
+                // Show the modal with the best match
+                $("#results-modal").modal("toggle");
+            });
+        } else {
+        alert("Please fill out all fields before submitting!");
+      }
+        });
     </script>
 </body>
 
